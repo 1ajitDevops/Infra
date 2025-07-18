@@ -4,14 +4,7 @@ module "resource_group" {
     resource_group_location = "centralindia"
   
 }
-
-module "resource_group" {
-    source = "../Child/azurerm_resource_group"
-    resource_group_name = "rg-102-canada"
-    resource_group_location = "centralindia"
   
-}
-
 module "virtual_network" {
     source = "../Child/azurerm_virtual_network"
     depends_on = [ module.resource_group ]
