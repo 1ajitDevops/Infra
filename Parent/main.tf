@@ -5,11 +5,16 @@ module "resource_group" {
   
 }
 
-module "resource_group" {
-    source = "../Child/azurerm_resource_group"
-    resource_group_name = "rg-102-canada"
-    resource_group_location = "centralindia"
-  
+module "resource_group_1" {
+  source                  = "../Child/azurerm_resource_group"
+  resource_group_name     = "rg-101-india"
+  resource_group_location = "centralindia"
+}
+
+module "resource_group_2" {
+  source                  = "../Child/azurerm_resource_group"
+  resource_group_name     = "rg-102-canada"
+  resource_group_location = "centralindia"
 }
 
 module "virtual_network" {
