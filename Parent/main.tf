@@ -83,7 +83,7 @@ module "pip" {
     public_ip_location = "centralindia"
     public_ip_name ="tullu-pip"
     allocation_method = "Static"
-  
+  depends_on = [module.resource_group]
 }
 
 
